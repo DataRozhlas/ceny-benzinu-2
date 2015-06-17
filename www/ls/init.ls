@@ -1,5 +1,5 @@
 window.ig =
-  projectName : "ceny-benzinu-2"
+  projectName : "diesely"
   containers: {}
 
 _gaq?.push(['_trackEvent', 'ig', ig.projectName]);

@@ -1,0 +1,47 @@
+div.ceny
+  position absolute
+  top 0px
+  left 0px
+  bottom 0px
+  width 100%
+svg.ceny
+  path.line
+    fill none
+    &.benzin
+      stroke ColorHeading
+    &.diesel
+      stroke ColorHeadingLink
+  .axis
+    shape-rendering crispEdges
+    path
+      fill #9
+    line
+      stroke #9
+    text
+      foll #6
+  .highlight-line
+    line
+      shape-rendering crispEdges
+      stroke #c
+    circle.benzin
+      fill ColorHeading
+    circle.diesel
+      fill ColorHeadingLink
+.tip-area
+  position absolute
+  bottom 40px
+  right 28px
+  width 140px
+  span
+    display block
+    width 100%
+    margin-top 5px
+  .benzin
+    border-bottom 1px solid ColorHeading
+  .diesel
+    border-bottom 1px solid ColorHeadingLink
+.prum-mzda
+  .tip-area
+    top 20px
+    bottom auto
+    width 210px

@@ -27,11 +27,8 @@ utils.formatNumber = (input, decimalPoints = 0) ->
   if decimalPoints
     wholePart = Math.floor input
     decimalPart = Math.abs input % 1
-    decimalPart = Math.round decimalPart * Math.pow 10, decimalPoints
-    if decimalPart >= Math.pow 10, decimalPoints
-      decimalPart -= Math.pow 10, decimalPoints
-      wholePart += 1
     wholePart = insertThousandSeparator wholePart
+    decimalPart = Math.round decimalPart * Math.pow 10, decimalPoints
     decimalPart = decimalPart.toString()
     while decimalPart.length < decimalPoints
       decimalPart = "0" + decimalPart
@@ -52,7 +49,3 @@ insertThousandSeparator = (input, separator = ' ') ->
       if isThirdNumeral and not isLast
         out.unshift separator
     out.join ''
-
-utils.divideToParts = (extent, breaks) ->
-  for i in [0 til breaks]
-    extent.0 + i * ((extent.1 - extent.0) / (breaks - 1))
